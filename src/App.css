@@ -1,0 +1,134 @@
+
+/* General layout */
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.app-shell > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 5%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.app-shell > main {
+  padding: 30px 5%;
+}
+
+/* Navigation */
+.admin-layout nav {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.admin-layout nav button,
+.learner-layout button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #e5e7eb;
+  color: #1f2937;
+}
+
+.admin-layout nav button[aria-current="page"] {
+  background-color: #4f46e5;
+  color: white;
+}
+
+/* Pages */
+section {
+  margin-bottom: 25px;
+}
+
+h2 {
+  margin-bottom: 16px;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 500px;
+  margin-bottom: 25px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+form button {
+  padding: 11px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #4f46e5;
+  color: white;
+}
+
+/* Buttons */
+button {
+  transition: opacity 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+/* Cards */
+.course-card,
+.user-card {
+  padding: 18px;
+  margin-bottom: 14px;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.course-card button {
+  margin: 8px 8px 0 0;
+}
+
+/* Messages */
+[role="alert"] {
+  margin: 12px 0;
+  color: #dc2626;
+}
+
+[role="status"] {
+  margin: 15px 0;
+  color: #4b5563;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .app-shell > header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .app-shell > main {
+    padding: 20px 4%;
+  }
+
+  .admin-layout nav {
+    flex-wrap: wrap;
+  }
+
+  form {
+    max-width: 100%;
+  }
+}
